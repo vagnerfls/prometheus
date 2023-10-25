@@ -5,6 +5,8 @@ resources:
   - ./namespace.yaml
   - ./Ingress/prometheus-ingress.yaml
   - ./Service/prometheus-svc.yaml
+  - ./Service/grafana-svc.yaml 
   - ./Secrets/prometheus-secret.yaml
   - ./ConfigMap/prometheus-cm.yaml
   - ./Deployment/prometheus-deployment.yaml
+  - ./Deployment/grafana.yaml

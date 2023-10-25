@@ -17,6 +17,16 @@ spec:
                 name: prometheus-svc
                 port:
                   number: 7700
+    - host: grafana.localhost
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: grafana-svc
+                port:
+                  number: 3000
   
   tls:
     - hosts:
