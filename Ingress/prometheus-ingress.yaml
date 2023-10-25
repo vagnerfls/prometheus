@@ -2,17 +2,18 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: prometheus-ingress
-  namespace: monitoramento
-  spec:
-    ingressClassName: nginx
-    rules:
-      - host: prometheus.local
-        http:
-          paths:
-          - backend:
+
+spec:
+  ingressClassName: nginx
+
+  rules:
+    - host: prometheus.localhost
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
               service:
                 name: prometheus-svc
-                port: 
+                port:
                   number: 7700
-            path: /
-            pathType: Prefix 
