@@ -8,13 +8,13 @@ metadata:
 
   spec:
     rules:
-      - host: prometheus.localhost
+      - host: prometheus.local
         http:
-          - paths:
-              pathType: Prefix
-              path: /
-            backend:
+          paths:
+          - backend:
               service:
                 name: prometheus-svc
-                port:
-                  number: 7700          
+                port: 
+                  number: 7700
+            path: /
+            pathType: Prefix
