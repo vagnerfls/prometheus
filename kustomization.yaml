@@ -5,3 +5,4 @@ resources:
   - ./namespace.yaml
   - ./Ingress/prometheus-ingress.yaml
   - ./Service/prometheus-svc.yaml
+  - ./Secrets/prometheus-secret.yaml
