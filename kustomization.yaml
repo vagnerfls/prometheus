@@ -8,3 +8,4 @@ resources:
   - ./Secrets/prometheus-secret.yaml
   - ./ConfigMap/prometheus-cm.yaml
   - ./Deployment/prometheus-deployment.yaml
+  - ./ClusterRole/prometheus-cr.yaml
