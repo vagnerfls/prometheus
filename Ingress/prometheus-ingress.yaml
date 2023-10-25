@@ -3,9 +3,6 @@ kind: Ingress
 metadata:
   name: prometheus-ingress
   namespace: monitoramento
-  annotations:
-    kubernetes.io/ingress.class: nginx
-
   spec:
     ingressClassName: nginx
     rules:
@@ -18,4 +15,4 @@ metadata:
                 port: 
                   number: 7700
             path: /
-            pathType: Prefix
+            pathType: Prefix 
