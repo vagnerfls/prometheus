@@ -27,6 +27,16 @@ spec:
                 name: grafana-svc
                 port:
                   number: 3000
+    - host: simple-api.localhost
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: simple-api-svc
+                port:
+                  number: 7777
   
   tls:
     - hosts:
