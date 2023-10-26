@@ -21,7 +21,7 @@ spec:
             cpu: "400m"          
           limits:
             memory: "64 Gi"
-            cpu: "8simple-api00m"
+            cpu: "800m"
         ports:
         - containerPort: 3000
 
