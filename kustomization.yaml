@@ -11,3 +11,4 @@ resources:
   - ./Deployment/prometheus-deployment.yaml
   - ./Deployment/grafana.yaml
   - ./Pod/liveness-demo.yaml
+  - ./Pod/readiness-demo.yaml
