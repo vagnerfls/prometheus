@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: simple-api
 spec:
-  replicas: 3
+  replicas: 4
   selector:
     matchLabels:
       app: simple-api
@@ -12,6 +12,13 @@ spec:
       labels:
         app: simple-api
     spec:
+      topologySpreadConstraints:
+        - maxSkew: 1
+          topologyKey: kubernetes,io/hostname
+          whenUnsatisfiable: DoNotSchedule
+          labelSelector:
+            matchLabels:
+              app: simple-api
       containers:
       - name: simple-api
         image: gustavoleitao/simple-api:1.0.3
