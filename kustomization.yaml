@@ -10,3 +10,4 @@ resources:
   - ./ConfigMap/prometheus-cm.yaml
   - ./Deployment/prometheus-deployment.yaml
   - ./Deployment/grafana.yaml
+  - ./Pod/liveness-demo.yaml
