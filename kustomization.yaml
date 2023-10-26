@@ -10,5 +10,6 @@ resources:
   - ./ConfigMap/prometheus-cm.yaml
   - ./Deployment/prometheus-deployment.yaml
   - ./Deployment/grafana.yaml
+  - ./Deployment/simple-api.yaml  
   - ./Pod/liveness-demo.yaml
   - ./Pod/readiness-demo.yaml
