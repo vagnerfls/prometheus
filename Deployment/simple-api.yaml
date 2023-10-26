@@ -17,10 +17,10 @@ spec:
         image: gustavoleitao/simple-api:1.0.3
         resources:
           requests:
-            memory: "32 Gi"
+            memory: "32Gi"
             cpu: "400m"          
           limits:
-            memory: "64 Gi"
+            memory: "64Gi"
             cpu: "800m"
         ports:
         - containerPort: 3000
