@@ -22,15 +22,23 @@ spec:
 
       affinity:
         nodeAffinity:
-          preferredDuringSchedulingIgnoredDuringExecution:
-            - preference:
-                matchExpressions:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+              - matchExpressions:
                   - key: ssd-enabled
                     operator: In
                     values:
-                      - "true"
-              weight: 1
+                      - "true"           
+#          preferredDuringSchedulingIgnoredDuringExecution:
+#            - preference:
+#                matchExpressions:
+#                  - key: ssd-enabled
+#                    operator: In
+#                    values:
+#                      - "true"
+#              weight: 1
 
+         
       containers:
       - name: simple-api
         image: gustavoleitao/simple-api:1.0.3
