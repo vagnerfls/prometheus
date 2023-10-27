@@ -21,22 +21,22 @@ spec:
 #              app: simple-api
 
       affinity:
-        nodeAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            nodeSelectorTerms:
-              - matchExpressions:
-                  - key: ssd-enabled
-                    operator: In
-                    values:
-                      - "true"           
-#          preferredDuringSchedulingIgnoredDuringExecution:
-#            - preference:
-#                matchExpressions:
+#        nodeAffinity:
+#          requiredDuringSchedulingIgnoredDuringExecution:
+#            nodeSelectorTerms:
+#              - matchExpressions:
 #                  - key: ssd-enabled
 #                    operator: In
 #                    values:
-#                      - "true"
-#              weight: 1
+#                      - "true"           
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - preference:
+                matchExpressions:
+                  - key: ssd-enabled
+                    operator: In
+                    values:
+                      - "true"
+              weight: 1
 
          
       containers:
